@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 
+
 class CatProfileTableViewCell: UITableViewCell{
     
     @IBOutlet var profileLabel: UILabel!
-    @IBOutlet var profileInput: UITextField!
+    @IBOutlet var inputLabel: UILabel!
     @IBOutlet var profileInputContainer: UIView!
+    
+    
     
 }
 

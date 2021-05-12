@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var homeTableView: UITableView!
     
+
     
     
     override func viewDidLoad() {
@@ -21,6 +22,13 @@ class HomeViewController: UIViewController {
         homeTableView.delegate = self
         homeTableView.dataSource = self
         
+        
+    
+    }
+    
+    
+    
+    func feedNotif() {
         //Ask Permission
         let center = UNUserNotificationCenter.current()
         
@@ -28,31 +36,110 @@ class HomeViewController: UIViewController {
             
         }
         
+        
+        
         //Create Notification Content
         let content = UNMutableNotificationContent()
-        content.title = "Hey i am a notif"
-        content.body = "Look at me!"
+        content.title = "I'm Hungry!"
+        content.body = "Would you feed me, please? 🥺"
+        content.sound = UNNotificationSound.default
         
-        // Specify Trigger
-        let date = Date().addingTimeInterval(10)
         
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, . minute,. second], from: date)
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 21600, repeats: true)
         
         //Create Request
         
-        let uuidString = UUID().uuidString
+        let identifier  = "Local Notification"
         
-        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         
         //Register the Request
         center.add(request) { (error) in
-            // Check the error parameter and handle any errors
+            
         }
-    
     }
+    
+    func litterNotif() {
+        //Ask Permission
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            
+        }
+        
+        
+        
+        //Create Notification Content
+        let content = UNMutableNotificationContent()
+        content.title = "Uh-Oh, it's getting smelly here! 😷"
+        content.body = "Can you help me clean my litter box?"
+        content.sound = UNNotificationSound.default
+        
+//        172800
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 172800, repeats: true)
+        
+        //Create Request
+        
+        let identifier  = "Local Notification 2"
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        
+        //Register the Request
+        center.add(request) { (error) in
+            
+        }
+    }
+    
+    func bathNotif() {
+        //Ask Permission
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            
+        }
+        
+        
+        
+        //Create Notification Content
+        let content = UNMutableNotificationContent()
+        content.title = "It's SHOWER TIME! 🧽"
+        content.body = "Waiting for you to give me a bath, hooman!"
+        content.sound = UNNotificationSound.default
+        
+        // Specify Trigger
+        _ = Date().addingTimeInterval(15)
+        
+//        604800
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
+        
+        //Create Request
+        
+        let identifier  = "Local Notification"
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        
+        //Register the Request
+        center.add(request) { (error) in
+            
+        }
+    }
+    
+    // -------------------- SETUP
+    
+    func loadsetup(){
+        roundButton()
+        feedNotif()
+        litterNotif()
+        bathNotif()
+    }
+    
+    // -------------------- SETUP
+    
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
        navigationController?.navigationBar.barStyle = .default
@@ -66,13 +153,14 @@ class HomeViewController: UIViewController {
     }
 
     
-    func loadsetup(){
-        roundButton()
-    }
+
     
     func roundButton(){
         calendarButton.layer.cornerRadius = 5
     }
+    
+    
+//    Insert Core Data
     
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -81,7 +169,15 @@ class HomeViewController: UIViewController {
         entry.title = homeInputCollection[index].title
         entry.date = Date()
         entry.image = homeInputCollection[index].image
+        
+        do {
+            try context.save()
+        } catch  {
+            
+        }
     }
+    
+    
 
 }
 
@@ -93,10 +189,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let alert = UIAlertController(title: "Log successful!", message: "Your activity is logged.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
 //        Insert data didalam alert
 //        Ketika di klik bakalan melakukan action dibawah ini
 
-        //        insertData(index: indexPath.row)
+        insertData(index: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

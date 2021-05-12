@@ -16,13 +16,15 @@
 		BD453E252639899700E3A184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD453E232639899700E3A184 /* LaunchScreen.storyboard */; };
 		BD453E33263A42C300E3A184 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E32263A42C200E3A184 /* HomeTableViewCell.swift */; };
 		BD453E36263A9BEB00E3A184 /* CatProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E35263A9BEB00E3A184 /* CatProfileViewController.swift */; };
-		BD453E39263BA31900E3A184 /* ActivityRecapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E38263BA31900E3A184 /* ActivityRecapViewController.swift */; };
 		BD453E3E263C054800E3A184 /* CatProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E3D263C054800E3A184 /* CatProfileTableViewCell.swift */; };
-		BD453E42263C46ED00E3A184 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E41263C46ED00E3A184 /* Profile.swift */; };
 		BD453E55263EE2EB00E3A184 /* HomeInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E53263EE2EB00E3A184 /* HomeInput+CoreDataClass.swift */; };
 		BD453E56263EE2EB00E3A184 /* HomeInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E54263EE2EB00E3A184 /* HomeInput+CoreDataProperties.swift */; };
 		BD453E5A263EE4B000E3A184 /* homeInput1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E59263EE4B000E3A184 /* homeInput1.swift */; };
 		BD453E64263EF36600E3A184 /* defaultHomeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD453E63263EF36600E3A184 /* defaultHomeInput.swift */; };
+		BD9982F4263FB399007FE85E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9982F3263FB399007FE85E /* EditProfileViewController.swift */; };
+		BD99830126402312007FE85E /* profileUserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99830026402312007FE85E /* profileUserInput.swift */; };
+		BD99830826403572007FE85E /* ActivityRecapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99830726403572007FE85E /* ActivityRecapViewController.swift */; };
+		BD99830B2641A11D007FE85E /* ActivityRecapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99830A2641A11D007FE85E /* ActivityRecapTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,13 +39,15 @@
 		BD453E262639899700E3A184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD453E32263A42C200E3A184 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		BD453E35263A9BEB00E3A184 /* CatProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileViewController.swift; sourceTree = "<group>"; };
-		BD453E38263BA31900E3A184 /* ActivityRecapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecapViewController.swift; sourceTree = "<group>"; };
 		BD453E3D263C054800E3A184 /* CatProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileTableViewCell.swift; sourceTree = "<group>"; };
-		BD453E41263C46ED00E3A184 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BD453E53263EE2EB00E3A184 /* HomeInput+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeInput+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BD453E54263EE2EB00E3A184 /* HomeInput+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeInput+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD453E59263EE4B000E3A184 /* homeInput1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeInput1.swift; sourceTree = "<group>"; };
 		BD453E63263EF36600E3A184 /* defaultHomeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaultHomeInput.swift; sourceTree = "<group>"; };
+		BD9982F3263FB399007FE85E /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		BD99830026402312007FE85E /* profileUserInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileUserInput.swift; sourceTree = "<group>"; };
+		BD99830726403572007FE85E /* ActivityRecapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecapViewController.swift; sourceTree = "<group>"; };
+		BD99830A2641A11D007FE85E /* ActivityRecapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecapTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,7 @@
 			children = (
 				BD453E59263EE4B000E3A184 /* homeInput1.swift */,
 				BD453E63263EF36600E3A184 /* defaultHomeInput.swift */,
-				BD453E41263C46ED00E3A184 /* Profile.swift */,
+				BD99830026402312007FE85E /* profileUserInput.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -106,9 +110,11 @@
 			children = (
 				BD453E192639899400E3A184 /* HomeViewController.swift */,
 				BD453E32263A42C200E3A184 /* HomeTableViewCell.swift */,
-				BD453E38263BA31900E3A184 /* ActivityRecapViewController.swift */,
 				BD453E35263A9BEB00E3A184 /* CatProfileViewController.swift */,
 				BD453E3D263C054800E3A184 /* CatProfileTableViewCell.swift */,
+				BD9982F3263FB399007FE85E /* EditProfileViewController.swift */,
+				BD99830726403572007FE85E /* ActivityRecapViewController.swift */,
+				BD99830A2641A11D007FE85E /* ActivityRecapTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,17 +190,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD453E64263EF36600E3A184 /* defaultHomeInput.swift in Sources */,
+				BD99830126402312007FE85E /* profileUserInput.swift in Sources */,
 				BD453E202639899400E3A184 /* FelineFriend.xcdatamodeld in Sources */,
+				BD99830826403572007FE85E /* ActivityRecapViewController.swift in Sources */,
 				BD453E56263EE2EB00E3A184 /* HomeInput+CoreDataProperties.swift in Sources */,
 				BD453E55263EE2EB00E3A184 /* HomeInput+CoreDataClass.swift in Sources */,
 				BD453E36263A9BEB00E3A184 /* CatProfileViewController.swift in Sources */,
+				BD99830B2641A11D007FE85E /* ActivityRecapTableViewCell.swift in Sources */,
 				BD453E33263A42C300E3A184 /* HomeTableViewCell.swift in Sources */,
+				BD9982F4263FB399007FE85E /* EditProfileViewController.swift in Sources */,
 				BD453E5A263EE4B000E3A184 /* homeInput1.swift in Sources */,
 				BD453E1A2639899400E3A184 /* HomeViewController.swift in Sources */,
 				BD453E3E263C054800E3A184 /* CatProfileTableViewCell.swift in Sources */,
-				BD453E39263BA31900E3A184 /* ActivityRecapViewController.swift in Sources */,
 				BD453E162639899400E3A184 /* AppDelegate.swift in Sources */,
-				BD453E42263C46ED00E3A184 /* Profile.swift in Sources */,
 				BD453E182639899400E3A184 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
